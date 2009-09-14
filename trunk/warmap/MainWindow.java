@@ -8,9 +8,7 @@ package warmap;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.*;
 import java.io.*;
-import javax.imageio.ImageIO;
 
 /**
  *
@@ -18,10 +16,8 @@ import javax.imageio.ImageIO;
  */
 public class MainWindow extends javax.swing.JFrame
 {
-  String szFileName;
   PointDB APDB = new PointDB();   //point database
   Map m = new Map();              //map class
-  FIO fio = new FIO("nullFile");  //
   JLabel MapIcon;              //the map image
   JButton[] point;                //point buttons
   int ZoomLevel=0;
@@ -41,7 +37,7 @@ public class MainWindow extends javax.swing.JFrame
 
     ImageIcon Icon = new javax.swing.ImageIcon(getClass().getResource("/warmap/defaultmap.png"));
     MapPanel.removeAll();       //clear the area first
-    JLabel MapIcon = new JLabel(Icon);
+    MapIcon = new JLabel(Icon);
     MapPanel.add(MapIcon);
     MapIcon.setBounds(0,0,Icon.getIconWidth(),Icon.getIconHeight());
     MapPanel.setBounds(0,0,Icon.getIconWidth(),Icon.getIconHeight());
@@ -56,7 +52,7 @@ public class MainWindow extends javax.swing.JFrame
   {
     MapPanel.removeAll();       //clear the area first
     ImageIcon Icon = new ImageIcon(szMapLocation);
-    JLabel MapIcon = new JLabel(Icon);
+    MapIcon = new JLabel(Icon);
     MapPanel.add(MapIcon);
 
 
@@ -74,18 +70,7 @@ public class MainWindow extends javax.swing.JFrame
   {
     StatusText.setText("Imported "+Points+" access points from WiGLE.net");
   }
-  
-  
-  //over-ride default paint method
-  public void paint(Graphics g)
-  {
-    super.paint(g);     //super is the parent class
-
-    //for(int i=0;i<APDB.GetCount();i++)    //repaint all the points
-    //  point[i].repaint();
-  }
-  
-  
+ 
   //put all the points in the MapPanel
   public void DrawPoints()
   {    
@@ -120,8 +105,8 @@ public class MainWindow extends javax.swing.JFrame
       //draw each point
       MapIcon.add(point[i]);
       point[i].setBounds(
-              (m.GetYPos(APDB.GetAP(i).GetLon(),0,mapWidth)-((int)ButtonSize/2)),
-              (m.GetXPos(APDB.GetAP(i).GetLat(),0,mapHeight)-((int)ButtonSize/2)),
+              (m.GetYPos(APDB.GetAP(i).GetLon(),0,mapWidth)-(ButtonSize/2)),
+              (m.GetXPos(APDB.GetAP(i).GetLat(),0,mapHeight)-(ButtonSize/2)),
               ButtonSize, ButtonSize);  //button size
       if(!APDB.GetAP(i).GetWEP())
         point[i].setBackground(Green);
@@ -240,6 +225,8 @@ public class MainWindow extends javax.swing.JFrame
         helpMenu = new javax.swing.JMenu();
         aboutMenuItem = new javax.swing.JMenuItem();
 
+        FileChooser.setOpaque(true);
+
         AbootDialog.setTitle("Aboot");
         AbootDialog.setAlwaysOnTop(true);
         AbootDialog.setBackground(new java.awt.Color(204, 204, 255));
@@ -250,7 +237,7 @@ public class MainWindow extends javax.swing.JFrame
 
         jTextPane1.setBackground(new java.awt.Color(204, 204, 255));
         jTextPane1.setEditable(false);
-        jTextPane1.setText("This project by:\nRyan Clark\nMichael Moore\nJohn Leftwich\n\nProfessor Wheeler\nCET431 - Spring 2005\n");
+        jTextPane1.setText("This project by:\nRyan Clark\n\nProfessor Wheeler\nCET431 - Spring 2005\n");
         AbootDialog.getContentPane().add(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -502,7 +489,7 @@ public class MainWindow extends javax.swing.JFrame
   
   private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
     //AbootDialog.setPreferredSize(new Dimension(140,120));
-    AbootDialog.setSize(140,170);
+    AbootDialog.setSize(140,130);
     AbootDialog.setVisible(true);
   }//GEN-LAST:event_aboutMenuItemActionPerformed
 
