@@ -7,8 +7,8 @@ public class FIO
   private File szFile;
   private ObjectOutputStream output;
   private ObjectInputStream input;
-  public static final int IN=0;
-  public static final int OUT=1;
+  public static final boolean IN = false;
+  public static final boolean OUT = true;
   
   //
   // Returns the contents of the file in a string
@@ -31,7 +31,7 @@ public class FIO
 // Open file function, used for saving and importing a book
 //    int io specifies going in or out (OUT=0, IN=1)
 //
-  public void OpenFile(int io, String File)
+  public void OpenFile(boolean io, String File)
   {
     if(io==OUT)         //for opening a file for output
     {
@@ -54,7 +54,7 @@ public class FIO
 // Close file function
 //    int io specifies going in or out (OUT=0, IN=1)
 //
-  public void CloseFile(int io)
+  public void CloseFile(boolean io)
   {
     if(io==OUT)           //for closing a file that was used for output
     {

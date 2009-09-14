@@ -3,6 +3,9 @@
 <Form version="1.2" maxVersion="1.2" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.JFileChooser" name="FileChooser">
+      <Properties>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
     </Component>
     <Container class="javax.swing.JDialog" name="AbootDialog">
       <Properties>
@@ -26,7 +29,7 @@
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="text" type="java.lang.String" value="This project by:&#xa;Ryan Clark&#xa;Michael Moore&#xa;John Leftwich&#xa;&#xa;Professor Wheeler&#xa;CET431 - Spring 2005&#xa;"/>
+            <Property name="text" type="java.lang.String" value="This project by:&#xa;Ryan Clark&#xa;&#xa;Professor Wheeler&#xa;CET431 - Spring 2005&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -114,6 +117,7 @@
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
