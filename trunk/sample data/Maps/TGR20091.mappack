@@ -1,0 +1,12 @@
+shortName=TGR20091
+longName=Johnson County
+
+image.0=JiGLEMap/maps/TGR20091-0.png
+image.1=JiGLEMap/maps/TGR20091-1.png
+image.2=JiGLEMap/maps/TGR20091-2.png
+image.3=JiGLEMap/maps/TGR20091-3.png
+
+upperLeftX=39.075325
+upperLeftY=-95.05655
+lowerRightX=38.724476
+lowerRightY=-94.60744
