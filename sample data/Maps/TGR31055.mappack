@@ -1,0 +1,12 @@
+shortName=TGR31055
+longName=Douglas County
+
+image.0=JiGLEMap/maps/TGR31055-0.png
+image.1=JiGLEMap/maps/TGR31055-1.png
+image.2=JiGLEMap/maps/TGR31055-2.png
+image.3=JiGLEMap/maps/TGR31055-3.png
+
+upperLeftX=41.52525
+upperLeftY=-96.47072
+lowerRightX=41.058224
+lowerRightY=-95.87289

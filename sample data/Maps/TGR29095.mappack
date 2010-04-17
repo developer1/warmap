@@ -1,0 +1,12 @@
+shortName=TGR29095
+longName=Jackson County
+
+image.0=JiGLEMap/maps/TGR29095-0.png
+image.1=JiGLEMap/maps/TGR29095-1.png
+image.2=JiGLEMap/maps/TGR29095-2.png
+image.3=JiGLEMap/maps/TGR29095-3.png
+
+upperLeftX=39.237026
+upperLeftY=-94.61534
+lowerRightX=38.83297
+lowerRightY=-94.098114
